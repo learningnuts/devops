@@ -8,30 +8,45 @@ pipeline{
 			
 				echo" Build Stage"			
 			}
-		
-		
 		}
 		
 		stage("deploy"){
-			
 			steps{
 			
 				echo" Deploy Stage"			
 			}
 		
-		
 		}
 		stage("test"){
+			when {
+				expression {
+				BRANCH_NAME == 'dev'
+				}
+			}
 			
 			steps{
-			
 				echo" Test Stage"			
 			}
-		
-		
 		}
 	
 	}
+	post {
+	
+		always{
+		
+		}
+		success {
+		
+		}
+		
+		failure {
+	
+	
+		}
+	
+	
+	}
+	
 
 }
 
