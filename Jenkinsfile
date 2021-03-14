@@ -6,7 +6,7 @@ pipeline {
 	
 		stage ("Build Stage") {
 		
-			step {
+			steps {
 			
 			echo " Building  project Stage"
 			
@@ -16,7 +16,7 @@ pipeline {
 	
 		stage ("Test Stage") {
 		
-			step {
+			steps {
 			
 			echo " Testing  project Stage"
 			
@@ -26,7 +26,7 @@ pipeline {
 		
 		stage ("Delivery Stage") {
 		
-			step {
+			steps {
 			
 			echo " Delivering  project Stage"
 			
